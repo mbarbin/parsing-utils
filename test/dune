@@ -1,0 +1,7 @@
+(library
+ (name parsing_utils_test)
+ (inline_tests)
+ (flags :standard -w +a-4-40-41-42-44-45-66 -warn-error +a)
+ (libraries parsing_utils)
+ (preprocess
+  (pps ppx_jane ppx_js_style -check-doc-comments)))

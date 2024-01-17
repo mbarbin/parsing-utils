@@ -18,7 +18,6 @@
 (package
  (name parsing-utils)
  (synopsis "A lib to make it easier to use generated Parsers/Lexers")
- (description "A lib to make it easier to use generated Parsers/Lexers")
  (depends
   (ocaml
    (>= 5.1))

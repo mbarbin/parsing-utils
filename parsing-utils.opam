@@ -8,8 +8,8 @@ homepage: "https://github.com/mbarbin/parsing-utils"
 doc: "https://mbarbin.github.io/parsing-utils/"
 bug-reports: "https://github.com/mbarbin/parsing-utils/issues"
 depends: [
+  "dune" {>= "3.12"}
   "ocaml" {>= "5.1"}
-  "dune" {>= "3.11" & >= "3.11"}
   "base" {>= "v0.16" & < "v0.17"}
   "core" {>= "v0.16" & < "v0.17"}
   "eio" {>= "0.13"}

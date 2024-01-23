@@ -32,7 +32,7 @@
   (eio
    (>= 0.14))
   (error-log
-   (>= 0.0.1))
+   (>= 0.0.2))
   (expect_test_helpers_core
    (and
     :with-test
@@ -41,13 +41,13 @@
   (fpath
    (>= 0.7.3))
   (fpath-extended
-   (>= 0.0.2))
+   (>= 0.0.3))
   (loc
-   (>= 0.0.1))
+   (>= 0.0.2))
   (pp
    (>= 1.2.0))
   (pp-extended
-   (>= 0.0.1))
+   (>= 0.0.2))
   (ppx_jane
    (and
     (>= v0.16)

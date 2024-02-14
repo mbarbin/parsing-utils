@@ -8,12 +8,12 @@ homepage: "https://github.com/mbarbin/parsing-utils"
 doc: "https://mbarbin.github.io/parsing-utils/"
 bug-reports: "https://github.com/mbarbin/parsing-utils/issues"
 depends: [
-  "dune" {>= "3.13"}
+  "dune" {>= "3.14"}
   "ocaml" {>= "5.1"}
   "base" {>= "v0.16" & < "v0.17"}
   "core" {>= "v0.16" & < "v0.17"}
   "eio" {>= "0.14"}
-  "error-log" {>= "0.0.2"}
+  "error-log" {>= "0.0.4"}
   "expect_test_helpers_core" {with-test & >= "v0.16" & < "v0.17"}
   "fpath" {>= "0.7.3"}
   "fpath-extended" {>= "0.0.3"}

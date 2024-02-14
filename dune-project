@@ -1,4 +1,4 @@
-(lang dune 3.13)
+(lang dune 3.14)
 
 (name parsing-utils)
 
@@ -32,7 +32,7 @@
   (eio
    (>= 0.14))
   (error-log
-   (>= 0.0.2))
+   (>= 0.0.4))
   (expect_test_helpers_core
    (and
     :with-test

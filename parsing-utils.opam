@@ -16,7 +16,7 @@ depends: [
   "error-log" {>= "0.0.4"}
   "expect_test_helpers_core" {with-test & >= "v0.16" & < "v0.17"}
   "fpath" {>= "0.7.3"}
-  "fpath-extended" {>= "0.0.6"}
+  "fpath-extended" {>= "0.0.7"}
   "loc" {>= "0.0.2"}
   "pp" {>= "1.2.0"}
   "pp-extended" {>= "0.0.2"}

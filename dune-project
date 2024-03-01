@@ -30,7 +30,7 @@
     (>= v0.16)
     (< v0.17)))
   (eio
-   (>= 0.14))
+   (>= 0.15))
   (error-log
    (>= 0.0.4))
   (expect_test_helpers_core

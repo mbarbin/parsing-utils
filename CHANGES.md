@@ -16,6 +16,8 @@
 
 ### Removed
 
+- Removed dependency into `Core`, use re-packaged `Doubly_linked`.
+
 ## 0.0.4 (2024-02-14)
 
 ### Changed

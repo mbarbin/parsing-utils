@@ -11,7 +11,7 @@
   Base
   -open
   Stdio)
- (libraries base core eio error-log fpath loc stdio)
+ (libraries base doubly-linked eio error-log fpath loc stdio)
  (lint
   (pps ppx_js_style -check-doc-comments))
  (preprocess

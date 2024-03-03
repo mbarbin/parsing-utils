@@ -25,7 +25,7 @@
    (and
     (>= v0.16)
     (< v0.17)))
-  (core
+  (doubly-linked
    (and
     (>= v0.16)
     (< v0.17)))

@@ -53,8 +53,6 @@ module Token = struct
   [@@deriving sexp_of]
 end
 
-module Doubly_linked = Core.Doubly_linked
-
 (* The first tokens are the most recent. *)
 type t =
   { tokens : Token.t Doubly_linked.t

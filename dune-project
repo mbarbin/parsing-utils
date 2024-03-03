@@ -33,7 +33,7 @@
    (>= 0.15))
   (error-log
    (>= 0.0.4))
-  (expect_test_helpers_core
+  (expect-test-helpers
    (and
     :with-test
     (>= v0.16)

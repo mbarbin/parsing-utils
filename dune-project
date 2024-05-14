@@ -20,7 +20,7 @@
  (synopsis "A lib to make it easier to use generated Parsers/Lexers")
  (depends
   (ocaml
-   (>= 5.1))
+   (>= 5.2))
   (base
    (and
     (>= v0.17)

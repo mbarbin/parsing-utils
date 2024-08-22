@@ -10,8 +10,10 @@
   -open
   Base
   -open
-  Stdio)
- (libraries base doubly-linked eio error-log fpath loc stdio)
+  Stdio
+  -open
+  Commandlang_err)
+ (libraries base commandlang-err doubly-linked eio fpath loc stdio)
  (lint
   (pps ppx_js_style -check-doc-comments))
  (preprocess

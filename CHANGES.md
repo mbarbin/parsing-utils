@@ -1,3 +1,18 @@
+## 0.0.7 (2024-08-22)
+
+### Added
+
+- New set of functions for `commandlang_err`.
+
+### Changed
+
+- Rename primitive `parser` (breaking change).
+
+### Removed
+
+- Remove functions based on `Error_log`.
+- Remove functions based on `Or_error`.
+
 ## 0.0.6 (2024-07-26)
 
 ### Added

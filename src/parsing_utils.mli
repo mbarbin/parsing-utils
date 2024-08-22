@@ -5,20 +5,19 @@
 
     {v
       let nestlist =
-        Parsing_utils.parse_file_exn
+        Parsing_utils.parse_file
           (module Bopkit_syntax)
           ~path
-          ~error_log
       in
       ...
     v}
 
-    There are two styles offered depending on the context:
+    There are several styles offered depending on the context:
 
-    1. Using the [Or_error] monad;
-    2. Using [Error_log].
+    1. Using the [Parsing_result] type.
+    2. Using [Commandlang_err].
 
-    In both cases, the functions take care of producing located error messages
+    In all cases, the functions take care of producing located error messages
     containing the name of the file and the position of the syntax error if any.
 
     The functions below that do not read the contents from a file still require
@@ -32,40 +31,38 @@ module type S = sig
   type t
 
   val lexer : Lexing.lexbuf -> token
-  val parser_ : (Lexing.lexbuf -> token) -> Lexing.lexbuf -> t
+  val parser : (Lexing.lexbuf -> token) -> Lexing.lexbuf -> t
 end
 
-(** {1 String interface (no I/O)}*)
+module Parsing_result : sig
+  type error =
+    { loc : Loc.t
+    ; exn : Exn.t
+    }
+
+  type 'a t = ('a, error) Result.t
+end
+
+(** {1 String interface (no I/O)} *)
 
 val parse_lexbuf
   :  (module S with type t = 'a)
   -> path:Fpath.t
   -> lexbuf:Lexing.lexbuf
-  -> 'a Or_error.t
+  -> 'a Parsing_result.t
 
 val parse_lexbuf_exn
   :  (module S with type t = 'a)
   -> path:Fpath.t
   -> lexbuf:Lexing.lexbuf
-  -> error_log:Error_log.t
   -> 'a
 
 (** {1 Stdio interface} *)
 
-val parse_file : (module S with type t = 'a) -> path:Fpath.t -> 'a Or_error.t
-
-val parse_file_exn
-  :  (module S with type t = 'a)
-  -> path:Fpath.t
-  -> error_log:Error_log.t
-  -> 'a
+val parse_file : (module S with type t = 'a) -> path:Fpath.t -> 'a Parsing_result.t
+val parse_file_exn : (module S with type t = 'a) -> path:Fpath.t -> 'a
 
 (** {1 Eio interface} *)
 
-val parse : (module S with type t = 'a) -> path:_ Eio.Path.t -> 'a Or_error.t
-
-val parse_exn
-  :  (module S with type t = 'a)
-  -> path:_ Eio.Path.t
-  -> error_log:Error_log.t
-  -> 'a
+val parse : (module S with type t = 'a) -> path:_ Eio.Path.t -> 'a Parsing_result.t
+val parse_exn : (module S with type t = 'a) -> path:_ Eio.Path.t -> 'a

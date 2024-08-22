@@ -1,5 +1,6 @@
 (library
  (name parsing_utils_test)
+ (public_name parsing-utils-test)
  (inline_tests)
  (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a)
  (libraries parsing_utils)

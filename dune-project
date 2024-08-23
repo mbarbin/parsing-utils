@@ -25,20 +25,20 @@
    (and
     (>= v0.17)
     (< v0.18)))
-  (commandlang-err
-   (>= 0.0.1))
   (doubly-linked
    (and
     (>= v0.17)
     (< v0.18)))
   (eio
    (>= 1.0))
+  (err0
+   (>= 0.0.2))
   (fpath
    (>= 0.7.3))
   (fpath-base
    (>= 0.0.9))
-  (loc
-   (>= 0.0.2))
+  (loc0
+   (>= 0.1.0))
   (pp
    (>= 1.2.0))
   (pp-extended
@@ -84,8 +84,8 @@
     (< v0.18)))))
 
 (package
- (name parsing-utils-test)
- (synopsis "Test package for parsing-utils")
+ (name parsing-utils-tests)
+ (synopsis "Tests for parsing-utils")
  (depends
   (ocaml
    (>= 5.2))
@@ -93,15 +93,15 @@
    (and
     (>= v0.17)
     (< v0.18)))
-  (commandlang-err
-   (>= 0.0.1))
   (doubly-linked
    (and
     (>= v0.17)
     (< v0.18)))
   (eio
    (>= 1.0))
-  (expect-test-helpers
+  (err0
+   (>= 0.0.2))
+  (expect_test_helpers_core
    (and
     (>= v0.17)
     (< v0.18)))
@@ -109,8 +109,8 @@
    (>= 0.7.3))
   (fpath-base
    (>= 0.0.9))
-  (loc
-   (>= 0.0.2))
+  (loc0
+   (>= 0.1.0))
   (odoc
    (>= 2.4.2))
   (pp

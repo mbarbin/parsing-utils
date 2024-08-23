@@ -1,8 +1,14 @@
+## 0.0.8 (2024-08-23)
+
+### Changed
+
+- Upgrade to `err0.0.0.2` & `loc0.0.1.0`.
+
 ## 0.0.7 (2024-08-22)
 
 ### Added
 
-- New set of functions for `commandlang_err`.
+- New set of functions for `err0`.
 
 ### Changed
 

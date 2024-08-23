@@ -15,7 +15,7 @@
     There are several styles offered depending on the context:
 
     1. Using the [Parsing_result] type.
-    2. Using [Commandlang_err].
+    2. Using [Err0].
 
     In all cases, the functions take care of producing located error messages
     containing the name of the file and the position of the syntax error if any.

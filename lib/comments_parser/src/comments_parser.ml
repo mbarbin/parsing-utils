@@ -32,7 +32,7 @@ module Comment_node = struct
     match t.value with
     | Resolved a -> a
     | Unresolved { pos_cnum; f = _ } ->
-      raise_s [%sexp "Comment_node hasn't been resolved", [%here], { pos_cnum : int }]
+      raise_s [%sexp "Comment_node hasn't been resolved", { pos_cnum : int }]
   ;;
 end
 
@@ -68,7 +68,7 @@ let the_t : t Lazy.t =
 let insert_token t (token : Token.t) =
   if !debug
   then
-    prerr_endline
+    Stdlib.prerr_endline
       (Printf.sprintf
          "DEBUG: insert_token %s"
          (Sexp.to_string_hum [%sexp (token : Token.t)]));
@@ -143,7 +143,7 @@ let extract_comments t ~pos_cnum =
   in
   if !debug
   then
-    prerr_endline
+    Stdlib.prerr_endline
       (Printf.sprintf
          "DEBUG: retrieve_comments pos_cnum=%d => %d comments"
          pos_cnum
@@ -152,7 +152,7 @@ let extract_comments t ~pos_cnum =
 ;;
 
 let reset () =
-  if !debug then prerr_endline "DEBUG: reset";
+  if !debug then Stdlib.prerr_endline "DEBUG: reset";
   let { tokens; comment_nodes } = force the_t in
   Doubly_linked.clear tokens;
   Queue.clear comment_nodes

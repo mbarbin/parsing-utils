@@ -15,7 +15,7 @@
     There are several styles offered depending on the context:
 
     1. Using the [Parsing_result] type.
-    2. Using [Err0].
+    2. Using [Err].
 
     In all cases, the functions take care of producing located error messages
     containing the name of the file and the position of the syntax error if any.
@@ -23,8 +23,6 @@
     The functions below that do not read the contents from a file still require
     a path to be provided, which will be used for error messages only (example
     when parsing the contents from stdin or a string). *)
-
-module Comments_state = Comments_state
 
 module type S = sig
   type token
@@ -37,10 +35,14 @@ end
 module Parsing_result : sig
   type error =
     { loc : Loc.t
-    ; exn : Exn.t
+    ; exn : exn
     }
 
   type 'a t = ('a, error) Result.t
+
+  (** [ok_exn r] is [x] when r is [Ok x]. Otherwise it raises an [Err.E]
+      exception. *)
+  val ok_exn : 'a t -> 'a
 end
 
 (** {1 String interface (no I/O)} *)
@@ -59,10 +61,5 @@ val parse_lexbuf_exn
 
 (** {1 Stdio interface} *)
 
-val parse_file : (module S with type t = 'a) -> path:Fpath.t -> 'a Parsing_result.t
-val parse_file_exn : (module S with type t = 'a) -> path:Fpath.t -> 'a
-
-(** {1 Eio interface} *)
-
-val parse : (module S with type t = 'a) -> path:_ Eio.Path.t -> 'a Parsing_result.t
-val parse_exn : (module S with type t = 'a) -> path:_ Eio.Path.t -> 'a
+val parse : (module S with type t = 'a) -> path:Fpath.t -> 'a Parsing_result.t
+val parse_exn : (module S with type t = 'a) -> path:Fpath.t -> 'a

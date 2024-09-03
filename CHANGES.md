@@ -1,3 +1,15 @@
+## 0.1.0 (2024-09-03)
+
+### Changed
+
+- Reduce dependencies of main `parsing-utils` package, move eio and comments support into separate package. Remove base dependency.
+- Make `parsing-utils-eio` a separate package.
+- Make `comments-parser` a separate package.
+
+### Fixed
+
+- Use `with-dev-setup` in opam files.
+
 ## 0.0.8 (2024-08-23)
 
 ### Changed

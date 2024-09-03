@@ -3,7 +3,7 @@
 
     The attachment of comments supported here is opinionated, and specific. In
     particular, it can't attach comments to a token that appears prior to these
-    comments within the lexems sequence.
+    comments within the lexem sequence.
 
     We hope that this API will allow attaching comments to AST nodes with
     minimal changes to an existing lexer/parser pair. Yet the comments will be
@@ -14,14 +14,12 @@
     state. It is important to [reset] the state between each invocation of a
     lexer/parser pair, otherwise the behavior is not specified and may cause
     comments to leak between unrelated parsers. [reset] is done for you if your
-    invocation is done through {!wrap} or the [Parsing_utils.parse*] functions
-    (for example {!Parsing_utils.parse_file}). If you are using your parser and
-    lexer directly, you should handle the reset. *)
+    invocation is done through {!wrap}. If you are using your parser and lexer
+    directly, you should handle the reset. *)
 val reset : unit -> unit
 
 (** To be called once the parsing is done, to attach all comments to comment
-    nodes. Like {!reset}, this is handled for you if you use {!wrap}, or
-    [Parsing_util].
+    nodes. Like {!reset}, this is handled for you if you use {!wrap}.
 
     [attach_comments] causes all functions [f] supplied to {!val:comment_node} to be
     executed. *)
@@ -51,7 +49,7 @@ type 'a comment_node
         | _tok=TOK1 rule=rule1 TOK2
           { { rule = rule1
             ; comments =
-                Comments_state.retrieve_comments
+                Comments_parser.comment_node
                   ~attached_to:($startpos(_tok))
                   ~f:Fn.id
             }
@@ -72,8 +70,9 @@ val debug : bool ref
 (** {1 Part for AST} *)
 
 module Comment_node : sig
-  type 'a t = 'a comment_node [@@deriving equal, sexp_of]
+  type 'a t = 'a comment_node [@@deriving sexp_of]
 
+  val equal : ('a -> 'a -> bool) -> 'a t -> 'a t -> bool
   val return : 'a -> 'a t
 
   (** Once {!attach_comments} has been called, all comments are attached to

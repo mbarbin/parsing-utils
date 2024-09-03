@@ -21,6 +21,47 @@
  (depends
   (ocaml
    (>= 5.2))
+  (ocamlformat
+   (and
+    :with-dev-setup
+    (= 0.26.2)))
+  (err
+   (>= 0.0.3))
+  (fpath
+   (>= 0.7.3))
+  (loc
+   (>= 0.2.0))))
+
+(package
+ (name parsing-utils-eio)
+ (synopsis
+  "A lib to make it easier to use generated Parsers/Lexers with Eio")
+ (depends
+  (ocaml
+   (>= 5.2))
+  (ocamlformat
+   (and
+    :with-dev-setup
+    (= 0.26.2)))
+  (eio
+   (>= 1.0))
+  (err
+   (>= 0.0.3))
+  (fpath
+   (>= 0.7.3))
+  (loc
+   (>= 0.2.0))))
+
+(package
+ (name comments-parser)
+ (synopsis "A lib to help parsing comments")
+ (depends
+  (ocaml
+   (>= 5.2))
+  (ocamlformat
+   (and
+    :with-dev-setup
+    (= 0.26.2)))
   (base
    (and
     (>= v0.17)
@@ -29,43 +70,9 @@
    (and
     (>= v0.17)
     (< v0.18)))
-  (eio
-   (>= 1.0))
-  (err0
-   (>= 0.0.2))
-  (fpath
-   (>= 0.7.3))
-  (fpath-base
-   (>= 0.0.9))
-  (loc0
-   (>= 0.1.0))
-  (pp
-   (>= 1.2.0))
-  (pp-extended
-   (>= 0.0.2))
-  (ppx_compare
-   (and
-    (>= v0.17)
-    (< v0.18)))
-  (ppx_enumerate
-   (and
-    (>= v0.17)
-    (< v0.18)))
-  (ppx_hash
-   (and
-    (>= v0.17)
-    (< v0.18)))
-  (ppx_here
-   (and
-    (>= v0.17)
-    (< v0.18)))
   (ppx_js_style
    (and
-    :dev
-    (>= v0.17)
-    (< v0.18)))
-  (ppx_let
-   (and
+    :with-dev-setup
     (>= v0.17)
     (< v0.18)))
   (ppx_sexp_conv
@@ -77,11 +84,7 @@
     (>= v0.17)
     (< v0.18)))
   (ppxlib
-   (>= 0.33))
-  (stdio
-   (and
-    (>= v0.17)
-    (< v0.18)))))
+   (>= 0.33))))
 
 (package
  (name parsing-utils-tests)
@@ -89,6 +92,10 @@
  (depends
   (ocaml
    (>= 5.2))
+  (ocamlformat
+   (and
+    :with-dev-setup
+    (= 0.26.2)))
   (base
    (and
     (>= v0.17)
@@ -99,8 +106,8 @@
     (< v0.18)))
   (eio
    (>= 1.0))
-  (err0
-   (>= 0.0.2))
+  (err
+   (>= 0.0.3))
   (expect_test_helpers_core
    (and
     (>= v0.17)
@@ -108,11 +115,9 @@
   (fpath
    (>= 0.7.3))
   (fpath-base
-   (>= 0.0.9))
-  (loc0
    (>= 0.1.0))
-  (odoc
-   (>= 2.4.2))
+  (loc
+   (>= 0.2.0))
   (pp
    (>= 1.2.0))
   (pp-extended
@@ -139,7 +144,7 @@
     (< v0.18)))
   (ppx_js_style
    (and
-    :dev
+    :with-dev-setup
     (>= v0.17)
     (< v0.18)))
   (ppx_let
@@ -156,9 +161,13 @@
     (< v0.18)))
   (ppxlib
    (>= 0.33))
-  (sherlodoc
-   (>= 0.2))
   (stdio
    (and
     (>= v0.17)
-    (< v0.18)))))
+    (< v0.18)))
+  (odoc
+   (>= 2.4.2))
+  (sherlodoc
+   (and
+    :with-doc
+    (>= 0.2)))))

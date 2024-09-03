@@ -1,0 +1,9 @@
+(library
+ (name comments_parser)
+ (public_name comments-parser)
+ (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a -open Base)
+ (libraries base doubly-linked)
+ (lint
+  (pps ppx_js_style -check-doc-comments))
+ (preprocess
+  (pps -unused-code-warnings=force ppx_sexp_conv ppx_sexp_value)))

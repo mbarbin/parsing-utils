@@ -10,7 +10,6 @@ bug-reports: "https://github.com/mbarbin/parsing-utils/issues"
 depends: [
   "dune" {>= "3.16"}
   "ocaml" {>= "5.2"}
-  "ocamlformat" {with-dev-setup & = "0.26.2"}
   "eio" {>= "1.0"}
   "err" {>= "0.0.3"}
   "fpath" {>= "0.7.3"}

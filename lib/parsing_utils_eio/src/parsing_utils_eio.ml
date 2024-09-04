@@ -2,7 +2,7 @@ module type S = Parsing_utils.S
 
 module Parsing_result = Parsing_utils.Parsing_result
 
-let parse (type t) (module S : S with type t = t) ~path:eio_path =
+let parse_file (type t) (module S : S with type t = t) ~path:eio_path =
   let path = eio_path |> snd |> Fpath.v in
   match Eio.Path.load eio_path with
   | exception (Eio.Io _ as exn) ->
@@ -13,6 +13,6 @@ let parse (type t) (module S : S with type t = t) ~path:eio_path =
     Parsing_utils.parse_lexbuf (module S) ~path ~lexbuf
 ;;
 
-let parse_exn (type t) (module S : S with type t = t) ~path =
-  parse (module S) ~path |> Parsing_result.ok_exn
+let parse_file_exn (type t) (module S : S with type t = t) ~path =
+  parse_file (module S) ~path |> Parsing_result.ok_exn
 ;;

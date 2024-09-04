@@ -1,3 +1,9 @@
+## 0.2.0 (2024-09-04)
+
+### Changed
+
+- Use name `parse_file` as basis for functions that parse files (breaking rename).
+
 ## 0.1.0 (2024-09-03)
 
 ### Changed

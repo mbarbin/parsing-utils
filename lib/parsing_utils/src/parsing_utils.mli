@@ -45,7 +45,7 @@ module Parsing_result : sig
   val ok_exn : 'a t -> 'a
 end
 
-(** {1 String interface (no I/O)} *)
+(** {1 Lexbuf interface} *)
 
 val parse_lexbuf
   :  (module S with type t = 'a)
@@ -59,7 +59,7 @@ val parse_lexbuf_exn
   -> lexbuf:Lexing.lexbuf
   -> 'a
 
-(** {1 Stdio interface} *)
+(** {1 File interface} *)
 
-val parse : (module S with type t = 'a) -> path:Fpath.t -> 'a Parsing_result.t
-val parse_exn : (module S with type t = 'a) -> path:Fpath.t -> 'a
+val parse_file : (module S with type t = 'a) -> path:Fpath.t -> 'a Parsing_result.t
+val parse_file_exn : (module S with type t = 'a) -> path:Fpath.t -> 'a

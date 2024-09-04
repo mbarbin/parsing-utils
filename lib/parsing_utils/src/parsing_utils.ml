@@ -45,7 +45,7 @@ let parse_lexbuf_exn (type t) (module S : S with type t = t) ~path ~lexbuf =
   parse_lexbuf (module S) ~path ~lexbuf |> Parsing_result.ok_exn
 ;;
 
-let parse (type t) (module S : S with type t = t) ~path =
+let parse_file (type t) (module S : S with type t = t) ~path =
   match In_channel.open_bin (path |> Fpath.to_string) with
   | exception Sys_error (m : string) ->
     Error { Parsing_result.loc = Loc.in_file ~path; exn = Failure m }
@@ -57,6 +57,6 @@ let parse (type t) (module S : S with type t = t) ~path =
         parse_lexbuf (module S) ~path ~lexbuf)
 ;;
 
-let parse_exn (type t) (module S : S with type t = t) ~path =
-  parse (module S) ~path |> Parsing_result.ok_exn
+let parse_file_exn (type t) (module S : S with type t = t) ~path =
+  parse_file (module S) ~path |> Parsing_result.ok_exn
 ;;

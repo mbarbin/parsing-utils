@@ -21,10 +21,6 @@
  (depends
   (ocaml
    (>= 5.2))
-  (ocamlformat
-   (and
-    :with-dev-setup
-    (= 0.26.2)))
   (err
    (>= 0.0.3))
   (fpath
@@ -39,10 +35,6 @@
  (depends
   (ocaml
    (>= 5.2))
-  (ocamlformat
-   (and
-    :with-dev-setup
-    (= 0.26.2)))
   (eio
    (>= 1.0))
   (err
@@ -58,21 +50,12 @@
  (depends
   (ocaml
    (>= 5.2))
-  (ocamlformat
-   (and
-    :with-dev-setup
-    (= 0.26.2)))
   (base
    (and
     (>= v0.17)
     (< v0.18)))
   (doubly-linked
    (and
-    (>= v0.17)
-    (< v0.18)))
-  (ppx_js_style
-   (and
-    :with-dev-setup
     (>= v0.17)
     (< v0.18)))
   (ppx_sexp_conv
@@ -115,7 +98,7 @@
   (fpath
    (>= 0.7.3))
   (fpath-base
-   (>= 0.1.0))
+   (>= 0.2.0))
   (loc
    (>= 0.2.0))
   (pp

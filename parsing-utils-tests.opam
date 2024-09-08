@@ -12,13 +12,16 @@ depends: [
   "ocaml" {>= "5.2"}
   "ocamlformat" {with-dev-setup & = "0.26.2"}
   "base" {>= "v0.17" & < "v0.18"}
+  "comments-parser" {= version}
   "doubly-linked" {>= "v0.17" & < "v0.18"}
   "eio" {>= "1.0"}
-  "err" {>= "0.0.3"}
+  "err" {>= "0.0.4"}
   "expect_test_helpers_core" {>= "v0.17" & < "v0.18"}
   "fpath" {>= "0.7.3"}
   "fpath-base" {>= "0.2.0"}
   "loc" {>= "0.2.0"}
+  "parsing-utils" {= version}
+  "parsing-utils-eio" {= version}
   "pp" {>= "1.2.0"}
   "pp-extended" {>= "0.0.2"}
   "ppx_compare" {>= "v0.17" & < "v0.18"}

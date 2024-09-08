@@ -1,3 +1,17 @@
+## 0.2.1 (unreleased)
+
+### Added
+
+### Changed
+
+### Deprecated
+
+### Fixed
+
+- Add missing dependencies between packages.
+
+### Removed
+
 ## 0.2.0 (2024-09-04)
 
 ### Changed

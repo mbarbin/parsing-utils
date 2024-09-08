@@ -22,7 +22,7 @@
   (ocaml
    (>= 5.2))
   (err
-   (>= 0.0.3))
+   (>= 0.0.4))
   (fpath
    (>= 0.7.3))
   (loc
@@ -38,11 +38,13 @@
   (eio
    (>= 1.0))
   (err
-   (>= 0.0.3))
+   (>= 0.0.4))
   (fpath
    (>= 0.7.3))
   (loc
-   (>= 0.2.0))))
+   (>= 0.2.0))
+  (parsing-utils
+   (= :version))))
 
 (package
  (name comments-parser)
@@ -83,6 +85,8 @@
    (and
     (>= v0.17)
     (< v0.18)))
+  (comments-parser
+   (= :version))
   (doubly-linked
    (and
     (>= v0.17)
@@ -90,7 +94,7 @@
   (eio
    (>= 1.0))
   (err
-   (>= 0.0.3))
+   (>= 0.0.4))
   (expect_test_helpers_core
    (and
     (>= v0.17)
@@ -101,6 +105,10 @@
    (>= 0.2.0))
   (loc
    (>= 0.2.0))
+  (parsing-utils
+   (= :version))
+  (parsing-utils-eio
+   (= :version))
   (pp
    (>= 1.2.0))
   (pp-extended

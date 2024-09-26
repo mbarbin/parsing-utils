@@ -4,7 +4,7 @@
 
 A library to make it easier to use generated Parsers/Lexers.
 
-## Code documentation
+## Code Documentation
 
 The code documentation of the latest release is built with `odoc` and published
 to `GitHub` pages [here](https://mbarbin.github.io/parsing-utils).

@@ -1,18 +1,12 @@
-## 0.2.1 (unreleased)
-
-### Added
+## 0.2.1 (2024-09-29)
 
 ### Changed
 
 - Upgrade to `cmdlang.0.0.5`.
 
-### Deprecated
-
 ### Fixed
 
 - Add missing dependencies between packages.
-
-### Removed
 
 ## 0.2.0 (2024-09-04)
 

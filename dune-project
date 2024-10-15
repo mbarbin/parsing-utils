@@ -102,7 +102,7 @@
   (fpath
    (>= 0.7.3))
   (fpath-base
-   (>= 0.2.0))
+   (>= 0.2.2))
   (loc
    (>= 0.2.0))
   (parsing-utils

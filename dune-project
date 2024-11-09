@@ -21,12 +21,12 @@
  (depends
   (ocaml
    (>= 5.2))
-  (err
-   (>= 0.0.5))
   (fpath
    (>= 0.7.3))
   (loc
-   (>= 0.2.0))))
+   (>= 0.2.0))
+  (pp-log
+   (>= 0.0.1))))
 
 (package
  (name parsing-utils-eio)
@@ -37,14 +37,14 @@
    (>= 5.2))
   (eio
    (>= 1.0))
-  (err
-   (>= 0.0.5))
   (fpath
    (>= 0.7.3))
   (loc
    (>= 0.2.0))
   (parsing-utils
-   (= :version))))
+   (= :version))
+  (pp-log
+   (>= 0.0.1))))
 
 (package
  (name comments-parser)
@@ -93,8 +93,6 @@
     (< v0.18)))
   (eio
    (>= 1.0))
-  (err
-   (>= 0.0.5))
   (expect_test_helpers_core
    (and
     (>= v0.17)
@@ -113,6 +111,8 @@
    (>= 1.2.0))
   (pp-extended
    (>= 0.0.2))
+  (pp-log
+   (>= 0.0.1))
   (ppx_compare
    (and
     (>= v0.17)

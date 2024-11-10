@@ -14,7 +14,7 @@ depends: [
   "fpath" {>= "0.7.3"}
   "loc" {>= "0.2.0"}
   "parsing-utils" {= version}
-  "pp-log" {>= "0.0.1"}
+  "pp-log" {>= "0.0.7"}
   "odoc" {with-doc}
 ]
 build: [

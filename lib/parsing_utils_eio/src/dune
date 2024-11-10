@@ -2,7 +2,7 @@
  (name parsing_utils_eio)
  (public_name parsing-utils-eio)
  (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a)
- (libraries eio err fpath loc parsing-utils)
+ (libraries eio fpath loc parsing-utils pp-log.err)
  (lint
   (pps ppx_js_style -check-doc-comments))
  (preprocess no_preprocessing))

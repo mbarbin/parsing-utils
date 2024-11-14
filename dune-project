@@ -26,7 +26,7 @@
   (loc
    (>= 0.2.0))
   (pp-log
-   (>= 0.0.7))))
+   (>= 0.0.8))))
 
 (package
  (name parsing-utils-eio)
@@ -44,7 +44,7 @@
   (parsing-utils
    (= :version))
   (pp-log
-   (>= 0.0.7))))
+   (>= 0.0.8))))
 
 (package
  (name comments-parser)
@@ -112,7 +112,7 @@
   (pp-extended
    (>= 0.0.2))
   (pp-log
-   (>= 0.0.7))
+   (>= 0.0.8))
   (ppx_compare
    (and
     (>= v0.17)

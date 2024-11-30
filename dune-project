@@ -15,6 +15,8 @@
 
 (documentation "https://mbarbin.github.io/parsing-utils/")
 
+(implicit_transitive_deps false)
+
 (package
  (name parsing-utils)
  (synopsis "A lib to make it easier to use generated Parsers/Lexers")

@@ -161,11 +161,11 @@ let reset () =
 let attach_comments () =
   let t = force the_t in
   Queue.iter t.comment_nodes ~f:(function T comment_node ->
-    (match comment_node.value with
-     | Resolved _ -> ()
-     | Unresolved { pos_cnum; f } ->
-       let comments = extract_comments t ~pos_cnum in
-       comment_node.value <- Resolved (f comments)));
+      (match comment_node.value with
+       | Resolved _ -> ()
+       | Unresolved { pos_cnum; f } ->
+         let comments = extract_comments t ~pos_cnum in
+         comment_node.value <- Resolved (f comments)));
   Queue.clear t.comment_nodes
 ;;
 

@@ -53,8 +53,8 @@ let parse_file (type t) (module S : S with type t = t) ~path =
     Fun.protect
       ~finally:(fun () -> In_channel.close ic)
       (fun () ->
-        let lexbuf = Lexing.from_channel ic in
-        parse_lexbuf (module S) ~path ~lexbuf)
+         let lexbuf = Lexing.from_channel ic in
+         parse_lexbuf (module S) ~path ~lexbuf)
 ;;
 
 let parse_file_exn (type t) (module S : S with type t = t) ~path =

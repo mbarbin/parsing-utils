@@ -2,7 +2,7 @@
  (name parsing_utils)
  (public_name parsing-utils)
  (flags :standard -w +a-4-40-41-42-44-45-48-66 -warn-error +a)
- (libraries fpath loc pp-log.err)
+ (libraries fpath loc pp pp-log.err)
  (lint
   (pps ppx_js_style -check-doc-comments))
  (preprocess no_preprocessing))

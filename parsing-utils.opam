@@ -12,6 +12,7 @@ depends: [
   "ocaml" {>= "5.2"}
   "fpath" {>= "0.7.3"}
   "loc" {>= "0.2.0"}
+  "pp" {>= "2.0.0"}
   "pp-log" {>= "0.0.8"}
   "odoc" {with-doc}
 ]

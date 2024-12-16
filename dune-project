@@ -108,7 +108,7 @@
   (parsing-utils-eio
    (= :version))
   (pp
-   (>= 1.2.0))
+   (>= 2.0.0))
   (pp-extended
    (>= 0.0.2))
   (pp-log

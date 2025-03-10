@@ -15,7 +15,7 @@ depends: [
   "loc" {>= "0.2.0"}
   "parsing-utils" {= version}
   "pp" {>= "2.0.0"}
-  "pp-log" {>= "0.0.8"}
+  "pplumbing" {>= "0.0.9"}
   "odoc" {with-doc}
 ]
 build: [

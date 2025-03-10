@@ -29,8 +29,8 @@
    (>= 0.2.0))
   (pp
    (>= 2.0.0))
-  (pp-log
-   (>= 0.0.8))))
+  (pplumbing
+   (>= 0.0.9))))
 
 (package
  (name parsing-utils-eio)
@@ -49,8 +49,8 @@
    (= :version))
   (pp
    (>= 2.0.0))
-  (pp-log
-   (>= 0.0.8))))
+  (pplumbing
+   (>= 0.0.9))))
 
 (package
  (name comments-parser)
@@ -117,8 +117,8 @@
    (>= 2.0.0))
   (pp-extended
    (>= 0.0.2))
-  (pp-log
-   (>= 0.0.8))
+  (pplumbing
+   (>= 0.0.9))
   (ppx_compare
    (and
     (>= v0.17)

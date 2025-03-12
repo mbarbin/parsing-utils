@@ -18,7 +18,7 @@ depends: [
   "expect_test_helpers_core" {>= "v0.17" & < "v0.18"}
   "fpath" {>= "0.7.3"}
   "fpath-base" {>= "0.2.2"}
-  "loc" {>= "0.2.0"}
+  "loc" {>= "0.2.2"}
   "parsing-utils" {= version}
   "parsing-utils-eio" {= version}
   "pp" {>= "2.0.0"}

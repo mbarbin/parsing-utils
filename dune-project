@@ -26,7 +26,7 @@
   (fpath
    (>= 0.7.3))
   (loc
-   (>= 0.2.0))
+   (>= 0.2.2))
   (pp
    (>= 2.0.0))
   (pplumbing
@@ -44,7 +44,7 @@
   (fpath
    (>= 0.7.3))
   (loc
-   (>= 0.2.0))
+   (>= 0.2.2))
   (parsing-utils
    (= :version))
   (pp
@@ -108,7 +108,7 @@
   (fpath-base
    (>= 0.2.2))
   (loc
-   (>= 0.2.0))
+   (>= 0.2.2))
   (parsing-utils
    (= :version))
   (parsing-utils-eio

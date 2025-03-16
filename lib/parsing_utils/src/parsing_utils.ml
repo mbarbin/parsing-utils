@@ -48,7 +48,7 @@ let parse_lexbuf_exn (type t) (module S : S with type t = t) ~path ~lexbuf =
 let parse_file (type t) (module S : S with type t = t) ~path =
   match In_channel.open_bin (path |> Fpath.to_string) with
   | exception Sys_error (m : string) ->
-    Error { Parsing_result.loc = Loc.in_file ~path; exn = Failure m }
+    Error { Parsing_result.loc = Loc.of_file ~path; exn = Failure m }
   | ic ->
     Fun.protect
       ~finally:(fun () -> In_channel.close ic)

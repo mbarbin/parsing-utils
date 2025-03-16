@@ -7,7 +7,7 @@ let parse_file (type t) (module S : S with type t = t) ~path:eio_path =
   match Eio.Path.load eio_path with
   | exception (Eio.Io _ as exn) ->
     Error
-      { Parsing_result.loc = Loc.in_file ~path; exn = Failure (Printexc.to_string exn) }
+      { Parsing_result.loc = Loc.of_file ~path; exn = Failure (Printexc.to_string exn) }
   | contents ->
     let lexbuf = Lexing.from_string contents in
     Parsing_utils.parse_lexbuf (module S) ~path ~lexbuf

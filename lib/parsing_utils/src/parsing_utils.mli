@@ -6,7 +6,7 @@
     {v
       let nestlist =
         Parsing_utils.parse_file
-          (module Bopkit_syntax)
+          (module Bopkit_parser)
           ~path
       in
       ...

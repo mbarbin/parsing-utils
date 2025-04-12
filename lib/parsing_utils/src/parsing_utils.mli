@@ -4,9 +4,9 @@
     module. For example:
 
     {v
-      let nestlist =
+      let result =
         Parsing_utils.parse_file
-          (module Bopkit_parser)
+          (module Parser)
           ~path
       in
       ...

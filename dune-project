@@ -30,7 +30,7 @@
   (pp
    (>= 2.0.0))
   (pplumbing
-   (>= 0.0.9))))
+   (>= 0.0.12))))
 
 (package
  (name parsing-utils-eio)
@@ -50,7 +50,7 @@
   (pp
    (>= 2.0.0))
   (pplumbing
-   (>= 0.0.9))))
+   (>= 0.0.12))))
 
 (package
  (name comments-parser)
@@ -118,7 +118,7 @@
   (pp-extended
    (>= 0.0.2))
   (pplumbing
-   (>= 0.0.9))
+   (>= 0.0.12))
   (ppx_compare
    (and
     (>= v0.17)
@@ -163,7 +163,7 @@
     (>= v0.17)
     (< v0.18)))
   (odoc
-   (>= 2.4.2))
+   (>= 2.4.4))
   (sherlodoc
    (and
     :with-doc

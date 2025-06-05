@@ -59,21 +59,14 @@
   (ocaml
    (>= 5.2))
   (base
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (doubly-linked
    (and
-    (>= v0.17)
-    (< v0.18)))
+    (>= v0.17)))
   (ppx_sexp_conv
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_value
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppxlib
    (>= 0.33))))
 
@@ -88,21 +81,16 @@
     :with-dev-setup
     (= 0.27.0)))
   (base
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (comments-parser
    (= :version))
   (doubly-linked
    (and
-    (>= v0.17)
-    (< v0.18)))
+    (>= v0.17)))
   (eio
    (>= 1.0))
   (expect_test_helpers_core
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (fpath
    (>= 0.7.3))
   (fpath-base
@@ -120,48 +108,29 @@
   (pplumbing
    (>= 0.0.12))
   (ppx_compare
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_enumerate
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_expect
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_hash
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_here
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_js_style
    (and
     :with-dev-setup
-    (>= v0.17)
-    (< v0.18)))
+    (>= v0.17)))
   (ppx_let
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_conv
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppx_sexp_value
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (ppxlib
    (>= 0.33))
   (stdio
-   (and
-    (>= v0.17)
-    (< v0.18)))
+   (>= v0.17))
   (odoc
    (>= 2.4.4))
   (sherlodoc

@@ -61,8 +61,7 @@
   (base
    (>= v0.17))
   (doubly-linked
-   (and
-    (>= v0.17)))
+   (>= v0.17))
   (ppx_sexp_conv
    (>= v0.17))
   (ppx_sexp_value
@@ -85,8 +84,7 @@
   (comments-parser
    (= :version))
   (doubly-linked
-   (and
-    (>= v0.17)))
+   (>= v0.17))
   (eio
    (>= 1.0))
   (expect_test_helpers_core

@@ -1,3 +1,10 @@
+## 0.3.0 (unreleased)
+
+### Removed
+
+- Removed `parsing-utils-eio` (@mbarbin).
+- Removed debug toplevel variable - replaced by env var (@mbarbin).
+
 ## 0.2.4 (2025-03-16)
 
 ### Changed

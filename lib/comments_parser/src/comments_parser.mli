@@ -62,11 +62,6 @@ type 'a comment_node
     end, when {!attach_comments} will be executed. *)
 val comment_node : attached_to:Lexing.position -> f:(string list -> 'a) -> 'a comment_node
 
-(** {1 Debugging} *)
-
-(** You may turn it on temporarily and inspect messages sent to stderr. *)
-val debug : bool ref
-
 (** {1 Part for AST} *)
 
 module Comment_node : sig

@@ -59,14 +59,19 @@ type t =
   ; comment_nodes : Comment_node.packed Queue.t
   }
 
-let debug = ref false
+let debug =
+  lazy
+    (match Stdlib.Sys.getenv_opt "COMMENTS_PARSER_DEBUG" with
+     | Some ("true" | "1") -> true
+     | Some _ | None -> false)
+;;
 
 let the_t : t Lazy.t =
   lazy { tokens = Doubly_linked.create (); comment_nodes = Queue.create () }
 ;;
 
 let insert_token t (token : Token.t) =
-  if !debug
+  if Lazy.force debug
   then
     Stdlib.prerr_endline
       (Printf.sprintf
@@ -141,7 +146,7 @@ let extract_comments t ~pos_cnum =
       List.iter comments ~f:(fun (elt, _) -> Doubly_linked.remove t.tokens elt);
       List.map comments ~f:snd
   in
-  if !debug
+  if Lazy.force debug
   then
     Stdlib.prerr_endline
       (Printf.sprintf
@@ -152,7 +157,7 @@ let extract_comments t ~pos_cnum =
 ;;
 
 let reset () =
-  if !debug then Stdlib.prerr_endline "DEBUG: reset";
+  if Lazy.force debug then Stdlib.prerr_endline "DEBUG: reset";
   let { tokens; comment_nodes } = force the_t in
   Doubly_linked.clear tokens;
   Queue.clear comment_nodes

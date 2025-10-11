@@ -33,26 +33,6 @@
    (>= 0.0.16))))
 
 (package
- (name parsing-utils-eio)
- (synopsis
-  "A lib to make it easier to use generated Parsers/Lexers with Eio")
- (depends
-  (ocaml
-   (>= 5.2))
-  (eio
-   (>= 1.0))
-  (fpath
-   (>= 0.7.3))
-  (loc
-   (>= 0.2.2))
-  (parsing-utils
-   (= :version))
-  (pp
-   (>= 2.0.0))
-  (pplumbing-err
-   (>= 0.0.16))))
-
-(package
  (name comments-parser)
  (synopsis "A lib to help parsing comments")
  (depends
@@ -85,8 +65,6 @@
    (= :version))
   (doubly-linked
    (>= v0.17))
-  (eio
-   (>= 1.0))
   (expect_test_helpers_core
    (>= v0.17))
   (fpath
@@ -96,8 +74,6 @@
   (loc
    (>= 0.2.2))
   (parsing-utils
-   (= :version))
-  (parsing-utils-eio
    (= :version))
   (pp
    (>= 2.0.0))

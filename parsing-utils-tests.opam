@@ -14,13 +14,11 @@ depends: [
   "base" {>= "v0.17"}
   "comments-parser" {= version}
   "doubly-linked" {>= "v0.17"}
-  "eio" {>= "1.0"}
   "expect_test_helpers_core" {>= "v0.17"}
   "fpath" {>= "0.7.3"}
   "fpath-base" {>= "0.2.2"}
   "loc" {>= "0.2.2"}
   "parsing-utils" {= version}
-  "parsing-utils-eio" {= version}
   "pp" {>= "2.0.0"}
   "pp-extended" {>= "0.0.2"}
   "pplumbing-err" {>= "0.0.16"}

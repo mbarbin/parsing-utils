@@ -1,9 +1,14 @@
-## 0.3.0 (unreleased)
+## 0.3.0 (2025-10-19)
+
+### Changed
+
+- Switch to `pplumbing-*` pkgs (#7, @mbarbin).
 
 ### Removed
 
-- Removed `parsing-utils-eio` (@mbarbin).
-- Removed debug toplevel variable - replaced by env var (@mbarbin).
+- Removed `comments-parser` (#9, @mbarbin).
+- Removed `parsing-utils-eio` (#8, @mbarbin).
+- Removed debug toplevel variable - replaced by env var (#8, @mbarbin).
 
 ## 0.2.4 (2025-03-16)
 

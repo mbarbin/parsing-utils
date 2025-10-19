@@ -33,33 +33,12 @@
    (>= 0.0.16))))
 
 (package
- (name comments-parser)
- (synopsis "A lib to help parsing comments")
- (depends
-  (ocaml
-   (>= 5.2))
-  (base
-   (>= v0.17))
-  (doubly-linked
-   (>= v0.17))
-  (ppx_sexp_conv
-   (>= v0.17))
-  (ppx_sexp_value
-   (>= v0.17))
-  (ppxlib
-   (>= 0.33))))
-
-(package
  (name parsing-utils-tests)
  (synopsis "Tests for parsing-utils")
  (depends
   (ocaml
    (>= 5.2))
   (base
-   (>= v0.17))
-  (comments-parser
-   (= :version))
-  (doubly-linked
    (>= v0.17))
   (expect_test_helpers_core
    (>= v0.17))
@@ -108,10 +87,6 @@
   (ocamlformat
    (= 0.27.0))
   (base
-   (>= v0.17))
-  (comments-parser
-   (= :version))
-  (doubly-linked
    (>= v0.17))
   (expect_test_helpers_core
    (>= v0.17))

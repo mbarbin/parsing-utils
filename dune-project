@@ -38,44 +38,20 @@
  (depends
   (ocaml
    (>= 5.2))
-  (base
-   (>= v0.17))
-  (expect_test_helpers_core
-   (>= v0.17))
   (fpath
    (>= 0.7.3))
-  (fpath-base
-   (>= 0.2.2))
   (loc
    (>= 0.2.2))
   (parsing-utils
    (= :version))
   (pp
    (>= 2.0.0))
-  (pp-extended
-   (>= 0.0.2))
   (pplumbing-err
    (>= 0.0.16))
-  (ppx_compare
-   (>= v0.17))
-  (ppx_enumerate
-   (>= v0.17))
   (ppx_expect
    (>= v0.17))
-  (ppx_hash
-   (>= v0.17))
-  (ppx_here
-   (>= v0.17))
-  (ppx_let
-   (>= v0.17))
-  (ppx_sexp_conv
-   (>= v0.17))
-  (ppx_sexp_value
-   (>= v0.17))
   (ppxlib
-   (>= 0.33))
-  (stdio
-   (>= v0.17))))
+   (>= 0.33))))
 
 (package
  (name parsing-utils-dev)
@@ -86,51 +62,15 @@
    (>= 5.2))
   (ocamlformat
    (= 0.28.1))
-  (base
-   (>= v0.17))
-  (expect_test_helpers_core
-   (>= v0.17))
-  (fpath
-   (>= 0.7.3))
-  (fpath-base
-   (>= 0.2.2))
-  (loc
-   (>= 0.2.2))
   (parsing-utils
    (= :version))
   (parsing-utils-tests
    (= :version))
-  (pp
-   (>= 2.0.0))
-  (pp-extended
-   (>= 0.0.2))
-  (pplumbing-err
-   (>= 0.0.16))
-  (ppx_compare
-   (>= v0.17))
-  (ppx_enumerate
-   (>= v0.17))
-  (ppx_expect
-   (>= v0.17))
-  (ppx_hash
-   (>= v0.17))
-  (ppx_here
-   (>= v0.17))
   (ppx_js_style
-   (>= v0.17))
-  (ppx_let
-   (>= v0.17))
-  (ppx_sexp_conv
-   (>= v0.17))
-  (ppx_sexp_value
    (>= v0.17))
   (ppxlib
    (>= 0.33))
-  (stdio
-   (>= v0.17))
   (odoc
    (>= 2.4.4))
   (sherlodoc
-   (and
-    :with-doc
-    (>= 0.2)))))
+   (>= 0.2))))

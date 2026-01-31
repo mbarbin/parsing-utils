@@ -1,4 +1,10 @@
-name: ci
+# Additional CI workflow using setup-dune (dune package management).
+# This workflow is intended to eventually replace more-ci.yml.
+#
+# This tests across multiple operating systems and OCaml versions, but skips
+# steps not necessary for every combination (linting, coverage, etc.).
+
+name: dune-pkg-more-ci
 
 on:
   push:
@@ -6,7 +12,7 @@ on:
       - main
   pull_request:
     branches:
-      - "**" # This will match pull requests targeting any branch
+      - "**"
 
 permissions:
   contents: read
@@ -18,8 +24,15 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
+          - macos-latest
         ocaml-version:
           - "5.4"
+          - "5.3"
+          - "5.2"
+        exclude:
+          # Exclude the combination already tested in the main ci workflow.
+          - os: ubuntu-latest
+            ocaml-version: "5.4"
 
     runs-on: ${{ matrix.os }}
 
@@ -34,23 +47,16 @@ jobs:
       - name: Environment setup
         run: |
           echo "DUNE_WORKSPACE=$PWD/dune-workspace-${{ matrix.ocaml-version }}" >> "$GITHUB_ENV"
+          echo "PACKAGES=parsing-utils,parsing-utils-tests" >> "$GITHUB_ENV"
 
       - name: Setup Dune
         uses: mbarbin/setup-dune@d38f7c80df59974cbe417c7f2a849219d54b4fdf # v2.0.0+patch-3
         with:
           version: "3.21.0"
           workspace: ${{ env.DUNE_WORKSPACE }}
-          cache-prefix: "main-ci-${{ matrix.ocaml-version }}"
+          cache-prefix: ${{ matrix.ocaml-version }}
+          only-packages: ${{ env.PACKAGES }}
           steps: install-dune enable-pkg lazy-update-depexts install-gpatch install-depexts
 
-      - name: Build and Run tests
-        run: dune build @all @runtest
-
-      - name: Lint
-        run: dune build @lint @fmt @unused-libs
-
-      - name: Build Doc
-        run: dune build @doc
-
-      - name: Check for uncommitted changes
-        run: git diff --exit-code
+      - name: Build & Run tests
+        run: dune build @all @runtest --only-packages=${{ env.PACKAGES }}

@@ -1,3 +1,9 @@
+(*********************************************************************************)
+(*  parsing-utils: Making it easier to use generated Parsers/Lexers              *)
+(*  SPDX-FileCopyrightText: 2023-2026 Mathieu Barbin <mathieu.barbin@gmail.com>  *)
+(*  SPDX-License-Identifier: MIT                                                 *)
+(*********************************************************************************)
+
 module type S = sig
   type token
   type t

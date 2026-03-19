@@ -61,7 +61,7 @@
   (ocaml
    (>= 5.2))
   (ocamlformat
-   (= 0.28.1))
+   (= 0.29.0))
   (parsing-utils
    (= :version))
   (parsing-utils-tests

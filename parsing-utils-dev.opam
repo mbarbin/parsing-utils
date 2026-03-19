@@ -10,7 +10,7 @@ bug-reports: "https://github.com/mbarbin/parsing-utils/issues"
 depends: [
   "dune" {>= "3.17"}
   "ocaml" {>= "5.2"}
-  "ocamlformat" {= "0.28.1"}
+  "ocamlformat" {= "0.29.0"}
   "parsing-utils" {= version}
   "parsing-utils-tests" {= version}
   "ppx_js_style" {>= "v0.17"}
